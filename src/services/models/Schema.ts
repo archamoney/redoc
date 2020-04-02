@@ -97,7 +97,7 @@ export class SchemaModel {
 
   init(parser: OpenAPIParser, isChild: boolean) {
     const schema = this.schema;
-    this.isCircular = schema['x-circular-ref'];
+    this.isCircular = false;//schema['x-circular-ref'];
 
     this.title =
       schema.title || (isNamedDefinition(this.pointer) && JsonPointer.baseName(this.pointer)) || '';
